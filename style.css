@@ -1,0 +1,156 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    /* border: 1px solid red; */
+}
+header{
+    width: 100%;
+    height: 100vh;
+}
+body{
+    background-color: #0082e6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ................ universal container ............ */
+
+.container{
+    width: 100%;
+}
+@media screen and (max-width: 2560px) {
+    .container {
+        max-width: 1536px;
+    }
+}
+@media screen and (max-width: 1440px) {
+    .container {
+        max-width: 1280px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .container {
+        max-width: 976px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+@media screen and (max-width: 425px) {
+    .container {
+        max-width: 100%;
+    }
+}
+@media screen and (max-width: 320px) {
+    .container {
+        max-width: 100%;
+    }
+}
+
+/* ................ navigation bar ............ */
+
+nav{
+    width: 100%;
+    height: 80px;
+    background-color: rgba(0, 17, 255, 0.794);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 40px;
+}
+.nav-container{
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .logo a{
+    font-size: 35px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.5s;
+    padding: 5px;
+}
+nav ul.menu li.menu-item{
+    display: inline-block;
+    margin: 0 5px;
+}
+nav ul.menu li.menu-item a{
+    text-decoration: none;
+    color: white;
+    padding: 8px 18px;
+    transition: 0.4s;
+    font-size: 18px;
+}
+nav ul.menu li.menu-item a.active , a.unactive:hover{
+    background-color: rgba(0, 0, 0, 0.222);
+}
+.checkbtn{
+    font-size: 30px;
+    float: right;
+    color: white;
+    cursor: pointer;
+    display: none;
+    padding: 5px;
+}
+#check{
+    display: none;
+}
+@media (max-width: 952px){
+    label.logo{
+        font-size: 30px;
+    }
+    ul.menu li.menu-item a.active , ul.menu li.menu-item a.unactive{
+        font-size: 16px;
+    } 
+}
+@media (max-width: 1024px){
+    nav{
+        padding: 0px 40px;
+    }
+    ul.menu{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        background-color: #2c3e50;
+        top: 80px;
+        left: -100%;
+        transition: all 0.5s;
+    }
+    nav ul.menu li.menu-item{
+        width: 100%;
+        display: block;
+        margin: 20px 0;
+        line-height: 30px;
+    }
+    nav ul.menu li.menu-item a{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .checkbtn{
+        display: block;
+    }
+    nav ul.menu li a{
+        font-size: 20px;
+    }
+    a:hover,a.active{
+        background-color: none;
+        color: #0082e6;
+    }
+    #check:checked ~ ul.menu{
+        left: 0%;
+    }
+}
+
+/* ................ navigation bar ............ */

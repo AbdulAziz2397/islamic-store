@@ -205,6 +205,17 @@ a.unactive:hover {
     }
 }
 
+@media (max-width: 786px) {
+    nav {
+        padding: 0px 30px;
+    }
+}
+@media (max-width: 426px) {
+    nav {
+        padding: 0px 20px;
+    }
+}
+
 /* ................ navigation bar ............ */
 
 
@@ -335,6 +346,13 @@ a.unactive:hover {
     display: flex;
     gap: 10px;
     align-items: center;
+}
+
+@media (max-width: 768px) {
+    .arrows {
+        right: 60%;
+    }
+   
 }
 
 .arrows button {

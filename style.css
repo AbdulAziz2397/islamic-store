@@ -103,6 +103,7 @@ nav ul.menu li.menu-item a {
     padding: 8px 18px;
     transition: 0.4s;
     font-size: 18px;
+    font-weight: 500;
 }
 
 nav ul.menu li.menu-item a.active,

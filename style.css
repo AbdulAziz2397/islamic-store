@@ -578,10 +578,10 @@ a.unactive:hover {
         padding-right: 0;
     }
     .carousel .list .item .content .title {
-        font-size: 20px;
+        font-size: 40px;
     }
     .carousel .list .item .content .topic {
-        font-size: 40px;
+        font-size: 30px;
     }
 }
 
@@ -596,12 +596,12 @@ a.unactive:hover {
 
 
 
-:root{
+/* :root{
     --width-circle: 150vw;
     --radius: calc(100vw / 6);
 }
 .cSlider{
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     overflow: hidden; 
     position: relative;
@@ -623,14 +623,23 @@ a.unactive:hover {
     text-align: center;
     transform: rotate(45deg);
     transition: transform 1s;
+    display: flex;
+    align-self: center;
+    justify-content: center;
 }
 .cSlider .cList .cItem.active{
     transform: rotate(0deg);
 }
-.cSlider .cList .cItem img{
+.cSlider .cList .cItem .img-box{
     width: 90%;
-    filter: drop-shadow(0 0 20px #000);
+    height: 90%;
     border-radius: 50%;
+}
+.cSlider .cList .cItem .img-box img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    filter: drop-shadow(0 0 20px #000);
 }
 .cSlider .cContent{
     position: absolute;
@@ -697,7 +706,6 @@ a.unactive:hover {
     right: 20px;
 }
 
-/* //circle */
 
 .circle{
     pointer-events: none;
@@ -731,4 +739,42 @@ a.unactive:hover {
     to{
         transform: translate(-50%, -50%) rotate(calc(var(--rotate) + 360deg));
     }
+} */
+
+
+
+/* .................collection section................... */
+
+.collection-h1-container{
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+.collection-h1-container .heading1{
+    font-size: 5em;
+    font-weight: bold;
+    line-height: 1.3em;
+    color: #fff;
+    text-shadow: 0 5px 10px #0004;
+}
+
+@media screen and (max-width: 1440px) {
+    .collection-h1-container .heading1{
+        font-size: 60px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .collection-h1-container .heading1{
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .collection-h1-container .heading1{
+        font-size: 40px;
+    }
+}
+
+/* .................collection section................... */

@@ -202,8 +202,8 @@ a.unactive:hover {
         left: 0%;
     }
     .cross{
-        margin-left: auto;
-        padding: 10px 30px 0px 0px;
+        padding: 5px;
+        margin: 10px 30px 0 auto;
     }
 }
 
@@ -845,6 +845,7 @@ a.unactive:hover {
     border: none;
     border-radius: 10px;
     font-size: small;
+    padding: 5px 10px;
 }
 .collectionSlider .form.left .collectionItem .collectionContent{
     transform: rotateY(-1deg) scale(0.8);

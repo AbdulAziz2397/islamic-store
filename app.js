@@ -95,3 +95,49 @@ function showSlider(type){
 //     newSpan.style.setProperty('--rotate', rotateThisSpan + 'deg');
 //     circle.appendChild(newSpan); 
 // });
+
+// ............. collection slider .................
+
+const collectionSlider = document.querySelector(".collectionSlider");
+const form = document.querySelector(".form");
+let mouseDownAt = 0;
+let left = 0;
+collectionSlider.onmousedown = (e) => {
+    mouseDownAt = e.clientX;
+    console.log(mouseDownAt);
+};
+collectionSlider.onmouseup = () => {
+    mouseDownAt = 0;  
+    collectionSlider.style.userSelect = 'unset';
+    collectionSlider.style.cursor = 'unset';
+    form.style.pointerEvents = 'unset';
+    form.classList.remove('left');
+    form.classList.remove('right');
+}
+collectionSlider.onmousemove = e => {
+    if(mouseDownAt == 0) return;
+    collectionSlider.style.userSelect = 'none';
+    collectionSlider.style.cursor = 'grab';
+    form.style.pointerEvents = 'none';
+    
+    if(e.clientX > mouseDownAt){
+        form.classList.add('left');
+        form.classList.remove('right');
+    }else if(e.clientX < mouseDownAt){
+        form.classList.remove('left');
+        form.classList.add('right');
+    }
+    // increase or decrease the speed 
+    //by changing the value of 'speed'
+    let speed = 3;
+    let leftTemporary = left + ((e.clientX - mouseDownAt) / speed);
+    let leftLimit = form.offsetWidth - collectionSlider.offsetWidth / 2;
+
+    
+    if(leftTemporary < 0 && Math.abs(leftTemporary) < leftLimit){
+        form.style.setProperty('--left', left + 'px');
+        left = leftTemporary;
+        mouseDownAt = e.clientX;
+    }
+
+}
